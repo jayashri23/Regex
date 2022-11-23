@@ -1,6 +1,7 @@
 package com.regex;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import static com.regex.Regex.*;
@@ -8,6 +9,7 @@ import static com.regex.Regex.validEmailId;
 
 public class RegexMain {
     public static void main(String [] args){
+
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter the user's First Name:");
         String firstName= sc.next();
@@ -54,6 +56,7 @@ public class RegexMain {
         }else {
             System.out.println("Given Password :"+password+ "is not valid");
         }
+        validEmail();
     }
 }
 

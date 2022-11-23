@@ -1,8 +1,9 @@
 package com.regex;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+import java.util.ArrayList;
 public class Regex {
 
     //method to check
@@ -74,5 +75,30 @@ public class Regex {
             flag =matcher.matches();
         }
         return flag;
+    }
+
+    //method to check email ids
+    public static void validEmail(){
+
+        ArrayList<String> list=new ArrayList<>();
+        list.add("ambc@yahoo.com");
+        list.add("abc-100@yahoo.com");
+        list.add("abc111@abc.com");
+        list.add("abc.100@yahoo.com");
+        list.add("abc-100@abc.net");
+        list.add("abc.100@abc.com.au");
+        list.add("abc@1.com");
+        list.add("abc@gmail.com.com");
+        list.add("abc+100@gmail.com");
+        String regex ="^[a-z0-9+_.-]+@[a-z]+.+[a-z]+.+[a-z]$";
+        Pattern pattern =Pattern.compile(regex);
+        for (int i=0; i< list.size();i++){
+            Matcher matcher =pattern.matcher(list.get(i));
+            boolean result =matcher.matches();
+            System.out.println("Given sample email id :"+list.get(i)+"is valid:" +result);
+        }
+        for (int i=list.size()-1;i>1;i--){
+            list.remove(i);
+        }
     }
 }
