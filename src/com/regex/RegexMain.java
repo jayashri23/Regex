@@ -46,6 +46,14 @@ public class RegexMain {
         {
             System.out.println("Given Mobile Number: " +mobileNumber+ " is not valid");
         }
+
+        System.out.println("Enter the user Password:");
+        String password =sc.next();
+        if (validPassword(password)){
+            System.out.println("Given Password :"+password+ "is valid");
+        }else {
+            System.out.println("Given Password :"+password+ "is not valid");
+        }
     }
 }
 

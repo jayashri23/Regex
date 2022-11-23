@@ -60,4 +60,19 @@ public class Regex {
         }
         return flag;
     }
+
+    //method for password
+    public static boolean validPassword(String passwd){
+        boolean flag = false;
+        String regex ="^(?=.*[A-Z))(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,20}$";
+      //  (?=.*[0-9])->represent  a digit must at once
+        // (?=.*[a-z])-> represent a lower char at least once
+        //(?=.*[A-Z])-> represent a capital char at least once
+        Pattern pattern =Pattern.compile(regex);
+        for (int i=0 ;i<passwd.length();i++){
+            Matcher matcher =pattern.matcher(passwd);
+            flag =matcher.matches();
+        }
+        return flag;
+    }
 }
