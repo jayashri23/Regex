@@ -33,4 +33,18 @@ public class Regex {
         }
         return flag;
     }
+
+
+    //method to check email id
+    public static boolean validEmailId(String emailId){
+        boolean flag=false;
+        String regex = "^[a-z0-9+_.-]+@+[a-z]+.+[a-z]$";
+        Pattern pattern =Pattern.compile(regex);
+        for (int i=0;i <emailId.length();i++)
+        {
+            Matcher matcher=pattern.matcher(emailId);
+            flag =matcher.matches();
+        }
+        return flag;
+    }
 }

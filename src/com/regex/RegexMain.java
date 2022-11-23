@@ -3,8 +3,8 @@ package com.regex;
 
 import java.util.Scanner;
 
-import static com.regex.Regex.validFirstName;
-import static com.regex.Regex.validLastName;
+import static com.regex.Regex.*;
+import static com.regex.Regex.validEmailId;
 
 public class RegexMain {
     public static void main(String [] args){
@@ -26,6 +26,16 @@ public class RegexMain {
         }else
         {
             System.out.println("Given last name: " +lastName+ " is not valid");
+        }
+
+        System.out.println("Enter the user's email id :");
+        String emailId = sc.next();
+        if(validEmailId(emailId)) {
+            System.out.println("Given email id: " + emailId + " is valid: " + validEmailId(emailId));
+        }
+        else {
+            System.out.println("Given email id: " + emailId + " is  not valid: " +validEmailId(emailId));
+
         }
     }
 }
