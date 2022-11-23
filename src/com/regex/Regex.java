@@ -47,4 +47,17 @@ public class Regex {
         }
         return flag;
     }
+
+    //method for mobile format
+    public static boolean validMobileNo(String number){
+        boolean flag=false;
+        String regex ="^((\\+91)?|91)? ?[789][0-9]{9}";
+        Pattern pattern =Pattern.compile(regex);
+        for (int i=0;i <number.length();i++)
+        {
+            Matcher matcher=pattern.matcher(number);
+            flag =matcher.matches();
+        }
+        return flag;
+    }
 }

@@ -15,7 +15,7 @@ public class RegexMain {
             System.out.println("Given first name: " +firstName+" is valid");
         }else
         {
-            System.out.println("Given first name: " +firstName+ " is not  valid");
+            System.out.println("Given first name: " +firstName+" is not valid");
         }
 
 
@@ -37,5 +37,15 @@ public class RegexMain {
             System.out.println("Given email id: " + emailId + " is  not valid: " +validEmailId(emailId));
 
         }
+
+        System.out.println("Enter the user's Mobile Number :");
+        String mobileNumber = sc.next();
+        if (validMobileNo(mobileNumber)){
+            System.out.println("Given Mobile Number: " +mobileNumber+" is valid");
+        }else
+        {
+            System.out.println("Given Mobile Number: " +mobileNumber+ " is not valid");
+        }
     }
 }
+
